@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q-Tech City</title>
+    <link rel="icon" type="image/png" href="image/web icon .png">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <script src="java script/translations.js"></script>
+</head>
+<body>
+  <!-- Loading Animation -->
+  <div class="loading-animation">
+    <div class="loading-spinner"></div>
+  </div>
+
+  <!-- Scroll Progress Indicator -->
+  <div class="scroll-progress">
+    <div class="scroll-progress-bar"></div>
+  </div>
+
+  <nav class="navbar">
+    <div class="banner">
+      <img src="image/nav banner.png" alt="Logo" width="65">
+    </div>
+    <!-- Add Hamburger Menu Button -->
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <!-- Add Overlay -->
+    <div class="nav-overlay"></div>
+    <div class="nav-links">
+      <a href="#home" data-translate="nav_home">Home</a>
+      <a href="#about" data-translate="nav_about">About Q-Tech City</a>
+      <a href="#services" data-translate="nav_services">Our Services</a>
+      <a href="#contact" data-translate="nav_contact">Contact Us</a>
+      <div class="language-switcher">
+        <button class="language-btn" onclick="toggleLanguage()">
+          <i class="fas fa-globe"></i>
+          <span class="lang-text">English</span>
+        </button>
+      </div>
+    </div>
+  </nav>
+<!---
+  <header>
+    <div class="header-content">
+      <div class="logo-container">
+        <img src="image/Logo.png" alt="logo" class="logo">
+        <div class="logo-glow"></div>
+      </div>
+      
+      <div class="title-container">
+        <div class="main-title"> 
+          <h1 data-translate="main_title">Q-Tech City</h1>
+        </div>
+        <div class="sub-title">
+          <h3 data-translate="sub_title">The Smart City of Qena</h3>
+          <p class="header-description" data-translate="header_description">Experience the future of urban living with cutting-edge technology and sustainable development</p>
+        </div>
+      </div>
+
+      <div class="header-cta">
+        <a href="#about" class="cta-button" data-translate="discover_more">Discover More</a>
+        <a href="#contact" class="cta-button secondary" data-translate="contact_us">Contact Us</a>
+      </div>
+    </div>
+  </header>
+    
+-->
+      <section id="home">
+        <header>
+          <div class="header-content">
+            <div class="header-overlay"></div>
+           
+            <div class="head">
+              <div class="logo-container">
+                 <img src="image/Logo.png" alt="logo" class="logo">
+                <div class="logo-glow"></div>
+              </div>
+                 
+              <div class="title-container">
+             <div class="main-title"> 
+        <h1 data-translate="main_title">Q-Tech City</h1>
+                  <div class="title-accent"></div>
+             </div>
+             <div class="sub-title">
+        <h3 data-translate="sub_title">The Smart City of Qena</h3>
+                  <p class="header-description" data-translate="header_description">Experience the future of urban living with cutting-edge technology and sustainable development</p>
+                </div>
+              </div>
+
+              <div class="header-cta">
+                <a href="#about" class="cta-button" data-translate="discover_more">Discover More</a>
+                <a href="#contact" class="cta-button secondary" data-translate="contact_us">Contact Us</a>
+              </div>
+            </div>
+
+            <div class="scroll-indicator">
+              <div class="mouse">
+                <div class="wheel"></div>
+              </div>
+              <div class="arrows">
+                <span></span>
+                <span></span>
+                <span></span>
+             </div>
+            </div>
+            </div>
+        </header>
+        <!---
+        <div class="image-slider-section">
+          <h2 class="slider-title" data-translate="slider_title">Discover the Future City</h2>
+          <div class="image-slider">
+              <div class="slider-container" id="sliderContainer">
+      
+                  <div class="slide active" style="background-image: url('https://images.unsplash.com/photo-1480714378408-67cf0d13bc1f?w=1200&h=500&fit=crop');">
+                      <img src="image/Q-tech arial.png" alt="photo"> 
+                      <div class="slide-content">
+                          <h3 data-translate="slide1_title">Advanced Technology</h3>
+                          <p data-translate="slide1_desc">Using cutting-edge technology to build a smart city that embraces the future and provides innovative solutions to improve quality of life</p>
+                      </div>
+                  </div>
+      
+                  <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=1200&h=500&fit=crop');">
+                      <div class="slide-content">
+                          <h3 data-translate="slide2_title">Smart Infrastructure</h3>
+                          <p data-translate="slide2_desc">A fully integrated network of smart services including transportation, energy, and communication for creating a developed urban environment</p>
+                      </div>
+                  </div>
+      
+                  <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&h=500&fit=crop');">
+                      <div class="slide-content">
+                          <h3 data-translate="slide3_title">Innovation and Development</h3>
+                          <p data-translate="slide3_desc">A center for innovation and research aimed at developing advanced technological solutions for the community</p>
+                      </div>
+                  </div>
+      
+                  <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?w=1200&h=500&fit=crop');">
+                      <div class="slide-content">
+                          <h3 data-translate="slide4_title">Environmental Sustainability</h3>
+                          <p data-translate="slide4_desc">A city friendly to the environment that relies on renewable energy and sustainable solutions for protecting our planet</p>
+                      </div>
+                  </div>
+      
+                  <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1486312338219-ce68e2c6b7d0?w=1200&h=500&fit=crop');">
+                      <div class="slide-content">
+                          <h3 data-translate="slide5_title">Digital Community</h3>
+                          <p data-translate="slide5_desc">Connecting citizens with government and commercial services through advanced digital platforms and easy-to-use interfaces</p>
+                      </div>
+                  </div>
+      
+              </div>
+      
+               
+              <button class="nav-btn prev">&#10094;</button> 
+              <button class="nav-btn next">&#10095;</button>
+      
+              
+              <div class="indicators" id="indicators"></div>
+              <script>
+                document.addEventListener('DOMContentLoaded', function() {
+                  let currentSlide = 0;
+                  const slides = document.querySelectorAll('.slide');
+                  const totalSlides = slides.length;
+                  const indicatorsContainer = document.getElementById('indicators');
+                  const nextBtn = document.querySelector('.next');
+                  const prevBtn = document.querySelector('.prev');
+                
+                  // إنشاء نقاط التنقل
+                  function createIndicators() {
+                    indicatorsContainer.innerHTML = '';
+                    for (let i = 0; i < totalSlides; i++) {
+                      const dot = document.createElement('span');
+                      dot.classList.add('indicator');
+                      if (i === currentSlide) dot.classList.add('active');
+                      dot.addEventListener('click', () => goToSlide(i));
+                      indicatorsContainer.appendChild(dot);
+                    }
+                  }
+                
+                  // تحديث الشرائح ونقاط التنقل
+                  function updateSlider() {
+                    slides.forEach((slide, index) => {
+                      if (index === currentSlide) {
+                        slide.style.display = 'block';
+                        slide.classList.add('active');
+                        setTimeout(() => {
+                          slide.style.opacity = '1';
+                        }, 50);
+                      } else {
+                        slide.classList.remove('active');
+                        slide.style.opacity = '0';
+                        setTimeout(() => {
+                          slide.style.display = 'none';
+                        }, 500);
+                      }
+                    });
+                
+                    // تحديث نقاط التنقل
+                    const dots = document.querySelectorAll('.indicator');
+                    dots.forEach((dot, index) => {
+                      dot.classList.toggle('active', index === currentSlide);
+                    });
+                  }
+                
+                  // الانتقال إلى شريحة محددة
+                  function goToSlide(index) {
+                    currentSlide = index;
+                    updateSlider();
+                  }
+                
+                  // الشريحة التالية
+                  function nextSlide() {
+                    currentSlide = (currentSlide + 1) % totalSlides;
+                    updateSlider();
+                  }
+                
+                  // الشريحة السابقة
+                  function prevSlide() {
+                    currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+                    updateSlider();
+                  }
+                
+                  // تهيئة العرض
+                  createIndicators();
+                  updateSlider();
+                
+                  // إضافة مستمعي الأحداث
+                  nextBtn.addEventListener('click', nextSlide);
+                  prevBtn.addEventListener('click', prevSlide);
+                
+                  // التنقل التلقائي كل 5 ثوانٍ
+                  let autoSlideInterval = setInterval(nextSlide, 5000);
+                
+                  // إيقاف التنقل التلقائي عند تحريك الماوس فوق العرض
+                  const sliderContainer = document.querySelector('.slider-container');
+                  sliderContainer.addEventListener('mouseenter', () => {
+                    clearInterval(autoSlideInterval);
+                  });
+                
+                  // استئناف التنقل التلقائي عند مغادرة الماوس
+                  sliderContainer.addEventListener('mouseleave', () => {
+                    autoSlideInterval = setInterval(nextSlide, 5000);
+                  });
+                
+                  // إضافة دعم لوحة المفاتيح
+                  document.addEventListener('keydown', (e) => {
+                    if (e.key === 'ArrowRight') nextSlide();
+                    if (e.key === 'ArrowLeft') prevSlide();
+                  });
+                });
+              </script>
+          </div>
+      </div> 
+    --> 
+      <!-- Full Width Video -->
+      <div class="video-container-full">
+        <h4 class="video-title">Q-tech city trailer</h4>
+        <div class="video-wrapper" id="videoWrapper">
+          <!-- Loading spinner -->
+          <div class="video-loading" id="videoLoading"></div>
+
+          <!-- Video element -->
+          <video 
+            id="cityVideo" 
+            poster="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAwIiBoZWlnaHQ9IjQ1MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImEiIHgxPSIwJSIgeTE9IjAlIiB4Mj0iMTAwJSIgeTI9IjEwMCUiPjxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiM2NjdlZWEiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM3NjRiYTIiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2EpIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIyNCIgZmlsbD0iI2ZmZiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPtmF2K/ZitmG2Kkg2YLZhtin2Kcg2KfZhNiw2YPZitipPC90ZXh0Pjx0ZXh0IHg9IjUwJSIgeT0iNjAlIiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTgiIGZpbGw9IiNlNmU2ZTYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGR5PSIuM2VtIj5TbWFydCBDaXR5IFFlbmE8L3RleHQ+PC9zdmc+"
+            controls 
+            preload="metadata"
+          >
+            <source src="trailer/lv_0_20250529022138.mp4" type="video/mp4">
+            لا يدعم المتصفح الخاص بك تشغيل الفيديو.
+          </video>
+
+          <!-- Play Button Overlay -->
+          <div class="video-overlay" id="videoOverlay" onclick="playVideo()"></div>
+        </div>
+        <p class="video-description">
+          شاهد رؤيتنا لمستقبل مدينة قنا الذكية - حيث التكنولوجيا تلتقي بالحياة اليومية
+        </p>
+      </div>
+      <script>
+        const video = document.getElementById('cityVideo');
+        const videoOverlay = document.getElementById('videoOverlay');
+        const videoLoading = document.getElementById('videoLoading');
+    
+        function playVideo() {
+          if (video.paused) {
+            video.play();
+            videoOverlay.style.opacity = '0';
+          } else {
+            video.pause();
+            videoOverlay.style.opacity = '1';
+          }
+        }
+    
+        // Hide loading when video is ready
+        video.addEventListener('loadeddata', () => {
+          videoLoading.style.display = 'none';
+          video.style.display = 'block';
+        });
+    
+        // Handle video events
+        video.addEventListener('play', () => {
+          videoOverlay.style.opacity = '0';
+        });
+    
+        video.addEventListener('pause', () => {
+          if (!video.ended) {
+            videoOverlay.style.opacity = '1';
+          }
+        });
+    
+        video.addEventListener('ended', () => {
+          videoOverlay.style.opacity = '1';
+        });
+    
+        // Simulate loading for demo purposes
+        setTimeout(() => {
+          videoLoading.style.display = 'none';
+          video.style.display = 'block';
+        }, 2000);
+      </script>
+    
+  
+            <div class="about" id="about">
+            <h3>Welcome to the Smart City of Qena</h3>
+            <details>
+              
+              <summary>Learn More About The Smart City</summary>
+              <p>The Smart City in Qena is a big step toward the future. 
+                Its main goal is to make life easier 
+                and faster for people by using modern technology
+                 in everyday services. Government services 
+                 will be digital, so people can complete paperwork
+                  online without waiting in long lines. There are also 
+                  smart ideas like automatic street lighting, 
+                  smart traffic systems, and waste management
+                   to keep the city clean, safe, and organized. All of this
+                   helps save time and energy, improves daily life, 
+                   and protects the environment
+
+            
+              </p>
+            </details>
+         </div>
+        
+      </div>
+  </div>
+ 
+
+
+          
+
+            
+            
+            
+         
+
+            
+        </header>
+        
+      </section>
+    
+    
+    
+      <section class="about-tech-city" id="about">
+        <div class="container">
+          <h2 class="section-title" data-translate="about_title">About Q-Tech City</h2>
+          
+          <div class="about-subheading" data-translate="about_subtitle">
+            The Future of Smart Urban Living in Egypt
+          </div>
+          
+          <div class="about-content">
+            <div class="about-image">
+              <img src="image/Q-tech arial.png" alt="Q-Tech City View">
+            </div>
+            
+            <div class="about-info">
+              <div class="info-card">
+                <div class="info-icon">
+                  <i class="establishment-icon">🏗️</i>
+                </div>
+                <div class="info-content">
+                  <h3 data-translate="establishment_title">Establishment</h3>
+                  <p data-translate="establishment_desc">Founded in 2023, Q-Tech City represents Egypt's vision for a technologically advanced urban center. The first phase was completed in early 2024, with continuous development planned through 2028.</p>
+                </div>
+              </div>
+              
+              <div class="info-card">
+                <div class="info-icon">
+                  <i class="location-icon">📍</i>
+                </div>
+                <div class="info-content">
+                  <h3 data-translate="location_title">Location</h3>
+                  <p data-translate="location_desc">Strategically located in Qena Governorate, Upper Egypt, spanning an area of 5,000 acres. The city sits 25km from Qena's city center, with excellent connectivity to major transportation networks.</p>
+                </div>
+              </div>
+              
+              <div class="info-card">
+                <div class="info-icon">
+                  <i class="features-icon">⭐</i>
+                </div>
+                <div class="info-content">
+                  <h3 data-translate="features_title">Key Features</h3>
+                  <ul class="features-list">
+                    <li><span class="feature-highlight">Smart Infrastructure</span> - IoT-enabled utilities and services</li>
+                    <li><span class="feature-highlight">Tech Hub</span> - Home to innovation centers and tech startups</li>
+                    <li><span class="feature-highlight">Sustainable Design</span> - 30% dedicated green spaces and renewable energy</li>
+                    <li><span class="feature-highlight">Digital Governance</span> - Paperless administration and e-services</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    <!-- -----------smart srvices section ------------>
+      <section class="our-services" id="services">
+        <div class="container">
+          <h2 class="section-title" data-translate="services_title">Our Services</h2>
+          
+          <div class="services-subheading" data-translate="services_subtitle">
+            Enhancing Life Through Smart Technology Solutions
+          </div>
+          
+          <div class="services-container">
+            <!-- Smart Park Service -->
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="park-icon">🌳</i>
+              </div>
+              <div class="service-content">
+                <h3 data-translate="park_title">Smart Park</h3>
+                <p data-translate="park_desc">Experience our technology-enhanced parks with smart lighting, automated irrigation, and interactive information systems.</p>
+                <div class="service-sublists">
+                  <h4 data-translate="park_locations">Locations:</h4>
+                  <ul class="location-list">
+                    <li data-translate="park_loc1">Central Tech Park</li>
+                    <li data-translate="park_loc2">Riverside Green Area</li>
+                    <li data-translate="park_loc3">Innovation Gardens</li>
+                    <li data-translate="park_loc4">Family Recreation Zone</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Smart School Service -->
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="school-icon">🏫</i>
+              </div>
+              <div class="service-content">
+                <h3 data-translate="school_title">Smart School</h3>
+                <p data-translate="school_desc">Educational facilities equipped with digital classrooms, interactive learning tools, and advanced security systems.</p>
+                <div class="service-sublists">
+                  <h4 data-translate="school_locations">Locations:</h4>
+                  <ul class="location-list">
+                    <li data-translate="school_loc1">Q-Tech Primary School</li>
+                    <li data-translate="school_loc2">Future Academy</li>
+                    <li data-translate="school_loc3">Digital Learning Center</li>
+                    <li data-translate="school_loc4">Technical Training Institute</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Smart Transportation Service -->
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="transportation-icon">🚌</i>
+              </div>
+              <div class="service-content">
+                <h3 data-translate="transportation_title">Smart Transportation</h3>
+                <p data-translate="transportation_desc">Efficient transit systems with real-time tracking, automated schedules, and eco-friendly vehicles.</p>
+                <div class="service-sublists">
+                  <h4>Routes:</h4>
+                  <ul class="location-list">
+                    <li>City Center Line</li>
+                    <li>Residential Areas Circuit</li>
+                    <li>Business District Express</li>
+                    <li>Educational Zone Route</li>
+                  </ul>
+                </div>
+                
+              </div>
+            </div>
+            
+            <!-- Smart Healthcare Service -->
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="healthcare-icon">🏥</i>
+              </div>
+              <div class="service-content">
+                <h3 data-translate="healthcare_title">Smart Healthcare</h3>
+                <p data-translate="healthcare_desc">Modern healthcare facilities with telehealth services, digital patient records, and smart monitoring systems.</p>
+                <div class="service-sublists">
+                  <h4>Facilities:</h4>
+                  <ul class="location-list">
+                    <li>Q-Tech General Hospital</li>
+                    <li>Digital Health Clinic</li>
+                    <li>Emergency Response Center</li>
+                    <li>Specialized Treatment Units</li>
+                  </ul>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+          
+          <!-- Smart Systems Section -->
+          <div class="smart-systems">
+            <h3 class="systems-title">Smart Systems</h3>
+            
+            <div class="systems-table-container">
+              <table class="systems-table">
+                <thead>
+                  <tr>
+                    <th>System Type</th>
+                    <th>Capabilities</th>
+                    <th>Implementation Areas</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Smart Traffic Management</td>
+                    <td>AI traffic lights, congestion control, emergency vehicle priority</td>
+                    <td>Main roads, Intersections, Highway entrances</td>
+                    <td><span class="status active">Active</span></td>
+                  </tr>
+                  <tr>
+                    <td>Electornic Booking System</td>
+                    <td>Smart grid, consumption monitoring, renewable integration</td>
+                    <td>Residential areas, Public buildings, Industrial zone</td>
+                    <td><span class="status active">Active</span></td>
+                  </tr>
+                  <tr>
+                
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+    
+      <section id="contact">
+        <div class="contact-container">
+          <h1 class="page-title" data-translate="contact_title">Contact Us</h1>
+          
+          <div class="contact-content">
+              <!-- Contact Form -->
+              <div class="contact-form">
+                  <h2 class="section-title" data-translate="contact_subtitle">Get In Touch</h2>
+                  <form id="contactForm" method="post">
+                      <div class="form-group">
+                          <label for="name" data-translate="form_name">Full Name</label>
+                          <input type="text" id="name" class="form-control" required>
+                      </div>
+                      
+                      <div class="form-group">
+                          <label for="email" data-translate="form_email">Email Address</label>
+                          <input type="email" id="email" class="form-control" required>
+                      </div>
+                      
+                      <div class="form-group">
+                          <label for="phone" data-translate="form_phone">Phone Number</label>
+                          <input type="tel" id="phone" class="form-control">
+                      </div>
+                      
+                      <div class="form-group">
+                          <label for="subject" data-translate="form_subject">Subject</label>
+                          <input type="text" id="subject" class="form-control">
+                      </div>
+                      
+                      <div class="form-group">
+                          <label for="message" data-translate="form_message">Message</label>
+                          <textarea id="message" class="form-control" required></textarea>
+                      </div>
+                      
+                      <button type="submit" class="btn-submit" data-translate="send_message">Send Message</button>
+                  </form>
+              </div>
+              
+              <!-- Contact Information -->
+              <div class="contact-info">
+                  <h2 class="section-title" data-translate="contact_subtitle">Get In Touch</h2>
+                  
+                  <div class="contact-item">
+                      <div class="contact-icon">
+                          <i class="fas fa-map-marker-alt"></i>
+                      </div>
+                      <div class="contact-text">
+                          <h4 data-translate="location_contact">Location</h4>
+                          <p>Q-Tech City, Qena Governorate, Upper Egypt</p>
+                      </div>
+                  </div>
+                  
+                  <div class="contact-item">
+                      <div class="contact-icon">
+                          <i class="fas fa-phone-alt"></i>
+                      </div>
+                      <div class="contact-text">
+                          <h4 data-translate="phone_contact">Phone</h4>
+                          <p>010 69730823</p>
+                      </div>
+                  </div>
+                  
+                  <div class="contact-item">
+                      <div class="contact-icon">
+                          <i class="fas fa-envelope"></i>
+                      </div>
+                      <div class="contact-text">
+                          <h4 data-translate="email_contact">Email</h4>
+                          
+                          <p>support@qtechcity.com</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+        </div>
+      </section>
+         <!-- Footer Section -->
+    <footer class="footer">
+      <div class="footer-container">
+          <div class="footer-columns">
+              <div class="footer-column">
+                  <div class="footer-logo">
+                      <div class="footer-logo-text"><span>Q-Tech</span> City</div>
+                  </div>
+                  <p style="color: rgba(255, 255, 255, 0.7); margin-bottom: 20px;">
+                      Egypt's vision for a technologically advanced urban center in Qena Governorate.
+                  </p>
+                  <div class="footer-social">
+                      <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                     
+                  </div>
+              </div>
+              
+              <div class="footer-column">
+                  <h3>Quick Links</h3>
+                  <ul class="footer-links">
+                      <li><a href="#home"><i class="fas fa-chevron-right"></i> Home</a></li>
+                      <li><a href="#about"><i class="fas fa-chevron-right"></i> About Q-Tech City</a></li>
+                      <li><a href="#services"><i class="fas fa-chevron-right"></i> Our Services</a></li>
+                      <li><a href="#contact"><i class="fas fa-chevron-right"></i> Contact Us</a></li>
+                  </ul>
+              </div>
+              
+              <div class="footer-column">
+                  <h3>Contact Info</h3>
+                  <div class="footer-contact">
+                      <p><i class="fas fa-map-marker-alt"></i> Q-Tech City, Qena Governorate, Upper Egypt</p>
+                      <p><i class="fas fa-phone-alt"></i> +20 10 69730823</p>
+                      <p><i class="fas fa-envelope"></i> support@qtechcity.com</p>
+                      
+                  </div>
+              </div>
+              
+                  
+          </div>
+          
+          <div class="footer-bottom">
+              <p class="footer-copyright">
+                  &copy; 2025 <strong>Q-Tech City</strong>. All Rights Reserved. Designed and Developed with Ahmed Ramadan<i class="fas fa-heart" style="color: #9373e6;"></i> in Egypt.
+              </p>
+          </div>
+      </div>
+  </footer>
+    
+<script>
+// Language switching functionality
+let currentLang = 'en';
+
+function toggleLanguage() {
+    const newLang = currentLang === 'en' ? 'ar' : 'en';
+    setLanguage(newLang);
+}
+
+function setLanguage(lang) {
+    currentLang = lang;
+    document.documentElement.lang = lang;
+    document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+    
+    // Update language button text
+    const langBtn = document.querySelector('.language-btn .lang-text');
+    langBtn.textContent = lang === 'en' ? 'English' : 'العربية';
+    
+    // Add fade out effect
+    document.body.classList.add('fade-out');
+    
+    // Update all translatable elements
+    const elements = document.querySelectorAll('[data-translate]');
+    elements.forEach(element => {
+        const key = element.getAttribute('data-translate');
+        if (translations[lang][key]) {
+            if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+                element.placeholder = translations[lang][key];
+            } else {
+                element.textContent = translations[lang][key];
+            }
+        }
+    });
+    
+    // Remove fade out effect
+    setTimeout(() => {
+        document.body.classList.remove('fade-out');
+    }, 300);
+    
+    // Save language preference
+    localStorage.setItem('preferred-language', lang);
+}
+
+// Initialize language from saved preference or default to English
+document.addEventListener('DOMContentLoaded', () => {
+    const savedLang = localStorage.getItem('preferred-language') || 'en';
+    setLanguage(savedLang);
+});
+
+// Loading Animation
+window.addEventListener('load', () => {
+  const loader = document.querySelector('.loading-animation');
+  loader.style.opacity = '0';
+  setTimeout(() => {
+    loader.style.display = 'none';
+  }, 500);
+});
+
+// Scroll Progress
+window.addEventListener('scroll', () => {
+  const scrollProgress = document.querySelector('.scroll-progress-bar');
+  const scrolled = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+  scrollProgress.style.width = `${scrolled}%`;
+  
+  // Show/hide scroll to top button
+  const scrollTop = document.querySelector('.scroll-to-top');
+  if (window.scrollY > 500) {
+    scrollTop.classList.add('visible');
+  } else {
+    scrollTop.classList.remove('visible');
+  }
+});
+
+// Scroll to top functionality
+document.querySelector('.scroll-to-top').addEventListener('click', () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+});
+
+// Section fade in animation
+const observerOptions = {
+  root: null,
+  rootMargin: '0px',
+  threshold: 0.1
+};
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, observerOptions);
+
+document.querySelectorAll('.section-fade-in').forEach(section => {
+  observer.observe(section);
+});
+</script>
+
+<!-- Footer End -->
+
+<!-- Link JavaScript file -->
+<script src="java script/script.js"></script>
+</body>
+</html>
